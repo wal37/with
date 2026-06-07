@@ -592,26 +592,22 @@ textarea {
 }
 
 .site-footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   gap: 24px;
   padding: 30px clamp(18px, 5vw, 68px);
   color: var(--white);
   background: #071029;
 }
 
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+}
+
 .footer-logo img {
   width: 180px;
-}
-
-.footer-brand p {
-  margin: 14px 0 6px;
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.footer-brand a:not(.footer-logo) {
-  color: var(--aqua);
-  font-weight: 900;
 }
 
 .site-footer nav {
@@ -620,6 +616,24 @@ textarea {
   gap: 18px;
   align-items: center;
   font-weight: 900;
+}
+
+.footer-menu {
+  display: grid;
+  justify-items: end;
+  gap: 10px;
+}
+
+.footer-email {
+  color: var(--aqua);
+  font-weight: 900;
+}
+
+.footer-rights {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.66);
+  text-align: center;
+  font-size: 14px;
 }
 
 .contact-page {
@@ -760,8 +774,22 @@ textarea {
     display: block;
   }
 
+  .footer-main {
+    display: block;
+  }
+
   .site-footer nav {
+    display: flex;
     margin-top: 22px;
+  }
+
+  .footer-menu {
+    justify-items: start;
+    margin-top: 22px;
+  }
+
+  .footer-rights {
+    margin-top: 28px;
   }
 
   .contact-logo {
